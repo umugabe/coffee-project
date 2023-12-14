@@ -46,6 +46,10 @@
     min-height: 100%;
     z-index: -2;
 }
+.box-container{
+    display: flex;
+}
+
 .welcome{
     color:white;
     text-align: left;
@@ -63,4 +67,23 @@
 #shop{
   font-style: italic;
   font-size: 18px;
+}
+.auto-input {
+    font-size: 2rem;
+    color:white;
+    /* margin-top: 20px; */
+    display: block;
+    /* padding: 20px; */
+   
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px white; */
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 15%;
+    width: 50%;
+    font-style: italic;
+}
+.animation
+{
+    
 }
