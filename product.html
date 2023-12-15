@@ -1,80 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./product.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./product.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <ul>
-            <a href="product.html"><li>Our products</li></a>
-            <a href="contact.html"><li>Contact us</li></a>
-            <a href="Aboutus.html"> <li>About us</li></a>
-           <a href="Index.html"> <li>Home</li></a>
-        </ul>
-        </div>
-    
+
+  <div class="navbar">
+    <ul>
+      <a href="product.html">
+        <li>Our products</li>
+      </a>
+      <a href="contact.html">
+        <li>Contact us</li>
+      </a>
+      <a href="Aboutus.html">
+        <li>About us</li>
+      </a>
+      <a href="Index.html">
+        <li>Home</li>
+      </a>
+    </ul>
+  </div>
+  <div class="toshow" id="ts">
+    <a href="#">
+    <span class="icon"><ion-icon onclick=hide() name="close-outline"></ion-icon></span>
+  </a>
+    <p>BOUGHT SUCCESSFULLY!!!!</p>
+  </div>
+
+  <div class="container">
     <div class="team-archi">
+      <div class="wrapper">
         <div>
-         <img src="./images/1.jpg" alt="">
-         <h1>COFFE</h1>
-         <p>CEO$FOUNDER</p>
-         <p>phasellus eget enim eu lectus faucibus vestibulum. <br>Suspendisse sodales pellentesque elementum</p>
-         <button>BUY</button>
+          <img src="./images/1.jpg" alt="">
+          <h1>COFFE</h1>
+          <p>CEO$FOUNDER</p>
+          <p>phasellus eget enim eu lectus faucibus vestibulum. <br>Suspendisse sodales pellentesque elementum</p>
+          <button onclick=show()>BUY</button>
         </div>
+      </div>
+    </div>
+    <div class="team-archi">
+      <div class="wrapper">
+        <div class="adding">
+          <img src="./images/2.jpg" alt="">
+          <h1>BEST COFFE</h1>
+          <p>BEST ONE</p>
+          <p>phasellus eget enim eu lectus faucibus <br> vestibulum.Suspendisse sodales pellentesque elementum</p>
+          <button onclick=show()>BUY</button>
+        </div>
+      </div>
+    </div>
+    <div class="team-archi">
+      <div class="wrapper">
         <div>
-            <img src="./images/2.jpg" alt="">
-            <h1>BEST COFFE</h1>
-            <p>BEST ONE</p>
-            <p>phasellus eget enim eu lectus faucibus <br> vestibulum.Suspendisse sodales pellentesque elementum</p>
-            <button>BUY</button>
-           </div>
-           <div>
-            <img src="./images/3.jpg" alt="">
-            <h1>FANTASTIC</h1>
-            <p>GOOD</p>
-            <p>phasellus eget enim eu lectus faucibus vestibulum. <br>Suspendisse sodales pellentesque elementum</p>
-            <button>BUY</button>
-           </div>
-           <div>
-            <img src="./images/5.jpg" alt="">
-            <h1>CHOCOLATE</h1>
-            <p>CHOCO COFFE</p>
-            <p>phasellus eget enim eu lectus faucibus vestibulum <br>.Suspendisse sodales pellentesque elementum</p>
-            <button>BUY</button>
-           </div>
+          <img src="./images/3.jpg" alt="">
+          <h1>FANTASTIC</h1>
+          <p>GOOD</p>
+          <p>phasellus eget enim eu lectus faucibus vestibulum. <br>Suspendisse sodales pellentesque elementum</p>
+          <button onclick=show()>BUY</button>
+        </div>
+      </div>
     </div>
+    <div class="team-archi">
+      <div class="wrapper">
+        <div>
+          <img src="./images/5.jpg" alt="">
+          <h1>CHOCOLATE</h1>
+          <p>CHOCO COFFE</p>
+          <p>phasellus eget enim eu lectus faucibus vestibulum <br>.Suspendisse sodales pellentesque elementum</p>
+          <button onclick=show()>BUY</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <script>
+    const show=()=>{
+       var a= document.querySelector('.toshow');
+       a.style.display="flex";
+    }
+    const hide=()=>{
+       var a= document.querySelector('.toshow');
+       a.style.display="none";
+    }
+</script>
+
     <div id="Contact">
-        <div class="Cont">
-            <h1>Contact</h1>
-            <hr/>
-            <p>Let get in touch and talk about your next project</p>
-        </div  id="input-type">
-        <form>
-          <div class="type1">
-            <input type="Name" placeholder="Name" >
-          </div>
-          <div class="type2">
-        <input type="Email" placeholder="Email" > 
-          </div>
-          <div class="type3">
-        <input type="Subject" placeholder="Subject" >
-          </div>
-          <div class="type4">
-        <input type="Comment" placeholder="Comment" >
-          </div>
-        </form>
-            <div class="send">
-                <button>SEND MESSAGE</button> <br> <br>
-                <img src="./map.jpg" alt="">
-            </div>
+      <div class="Cont">
+        <h1>Contact Us</h1>
+        <hr />
+        <p>Let get in touch and tell us what you like</p>
+      </div id="input-type">
+
+      <div class="contact-contect2">
+        <div class="part2-contact">
+          <form action="https://formsubmit.co/68d00fa30204edc2da91d9c1314a1fb9" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="text" name="message" placeholder="Write your message !!" required>
+            <button type="submit" class="btn1">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <footer>
-        <p>Powered by group 1</a></p>
-    </footer>
+
+    <script>
+      const img = document.getElementById("img");
+      img.onclick = function () {
+        this.classList.toggle("active")
+      }
+
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
 </body>
+
 </html>
