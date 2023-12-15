@@ -20,20 +20,20 @@ body{
    
 }
 
-/* Style the navbar */
+
 .navbar {
-    background-color:whitesmoke; /* Set background color */
-     /* overflow: hidden;   */
+    background-color:whitesmoke; 
+     
 }
 
-/* Style the list inside the navbar */
+
 .navbar ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
 }
 
-/* Style each list item */
+
 .navbar li {
     float: right;
     margin:0 10px ;
@@ -42,82 +42,101 @@ body{
     font-size: 20px;
     font-weight: lighter;
  
-    /* font-weight: 10px; Float items horizontally */
-    /* line-height: 0.5px; */
+   
 }
 
-/* Style the links inside the list items */
+
 .navbar li a {
     display: block;
-    color: white; /* Text color */
+    color: white; 
     text-align: center;
-    padding: 20px 20px; /* Add padding */
-    text-decoration: none; /* Remove underline */
+    padding: 20px 20px;
+    text-decoration: none; 
 }
 
-/* Change link color on hover */
+
 .navbar li a:hover {
     background-color: #ddd;
     color: white;
 }
-.portfolio .box-container
+.portfolio
 {
+    background-color: black;
+    margin: auto;
+}
+.portfolio .box-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
     gap: 1.5rem;
 }
-.portfolio .box-container .box
-{
-    flex: 1 1 30rem;
-    height: 25rem;
+
+.portfolio .box-container .row {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1.5rem;
+}
+
+.portfolio .box-container .box {
+    flex: 0 0 calc(33.33% - 1.5rem); 
+    height: 400px;
     position: relative;
     overflow: hidden;
-    border:1rem solid #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     background: #fff;
     border-radius: 0.5rem;
+    transition: transform 0.3s ease;
 }
-.portfolio .box-container .box img
-{height: 100%;
+
+.portfolio .box-container .box img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: .10rem;
-position: relative;
-z-index: 1;
+    border-radius: 0.10rem;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
 }
-.portfolio .box-container .box:hover img
-{
- height: 80%;
- width: 80%;
+
+
+.portfolio .box-container .box:hover img {
+   height: 80%;
+   width: 80%;
 }
-.portfolio .box-container .box h3
-{
+
+.portfolio .box-container .box h3 {
     position: absolute;
-    bottom: .5rem; left: 1rem;
-    font-size: 2.5rem;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
     color: #333;
     text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: bottom 0.3s ease;
+    opacity: 0;
 }
-.portfolio .box-container .box .icons
-{
+
+.portfolio .box-container .box:hover h3 {
+    bottom: 0;
+    opacity: 1;
+}
+.portfolio .box-container .box h2 {
+    display: none; 
     position: absolute;
-    top: 1rem; right: 1rem;
-}
-.portfolio .box-container .box .icons a{
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    border-radius: .5rem;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     text-align: center;
-    background: #eee;
-    color: #333;
-    font-size: 1.7rem;
-    line-height: 4rem;
-    transition: all.3s ease;
-    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.portfolio .box-container .box .icons a:hover
-{
-    background: var(--main-color);
-    color: #fff;
+
+.portfolio .box-container .box:hover h2 {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
 }
